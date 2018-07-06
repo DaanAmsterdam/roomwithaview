@@ -2,7 +2,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-import sample from './data';
+import { populateAmenitiesAndPrices } from './helpers';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -12,12 +12,15 @@ import sample from './data';
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
+let model = JSON.parse(window.roomwav_listing_model);
+model = populateAmenitiesAndPrices(model);
+
 const app = new Vue({
     el: '#app',
 
-    data: Object.assign(sample, {
+    data: Object.assign(model, {
         headerImageStyle: {
-            'background-image': 'url(/images/header.jpg)'
+            'background-image': `url(${model.images[0]})`
         },
         contracted: true,
         modalOpen: false,

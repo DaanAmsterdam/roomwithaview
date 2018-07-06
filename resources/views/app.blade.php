@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Room with a View</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css">
+    <script type="text/javascript">
+        window.roomwav_listing_model = "{!! addslashes(json_encode($model)) !!}";
+    </script>
 </head>
 
 <body>
@@ -29,7 +33,7 @@
             <hr>
             <div class="about">
                 <h3>About this listing</h3>
-                <p v-bind:class="{ contracted: contracted }">@{{ about }}</p>
+                <p :class="{ contracted: contracted }">@{{ about }}</p>
                 <button v-if="contracted" class="more" @click="contracted = false">+ More</button>
             </div>
             <div class="lists">
@@ -40,7 +44,7 @@
                     </div>
                     <div class="content">
                         <div class="list-item" v-for="amenity in amenities">
-                            <i class="fa fa-lg" v-bind:class="amenity.icon"></i>
+                            <i class="fa fa-lg" :class="amenity.icon"></i>
                             <span>@{{ amenity.title }}</span>
                         </div>
                     </div>
@@ -65,7 +69,7 @@
         &times;
       </button>
             <div class="modal-content">
-                <img src="{{ asset('images/header.jpg') }}">
+                <img :src="images[0]">
             </div>
         </div>
     </div>
