@@ -69,7 +69,7 @@
         &times;
       </button>
             <div class="modal-content">
-                <img :src="images[0]">
+                <image-carousel :images="images"></image-carousel>
             </div>
         </div>
     </div>

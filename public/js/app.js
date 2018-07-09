@@ -1127,6 +1127,50 @@ window.Vue = __webpack_require__(69);
 var model = JSON.parse(window.roomwav_listing_model);
 model = Object(__WEBPACK_IMPORTED_MODULE_0__helpers__["a" /* populateAmenitiesAndPrices */])(model);
 
+Vue.component('image-carousel', {
+    template: '\n        <div class="image-carousel">\n            <img :src="image">\n            <div class="controls">\n                <carousel-control\n                 dir="left"\n                 @change-image="changeImage"\n                ></carousel-control>\n                <carousel-control\n                 dir="right" \n                 @change-image="changeImage"\n                ></carousel-control>\n            </div>\n        </div>\n        ',
+    props: ['images'],
+    data: function data() {
+        return {
+            index: 0
+        };
+    },
+
+    computed: {
+        image: function image() {
+            return this.images[this.index];
+        }
+    },
+    methods: {
+        changeImage: function changeImage(val) {
+            var newVal = this.index + parseInt(val);
+            if (newVal < 0) {
+                this.index = this.images.length - 1;
+            } else if (newVal === this.images.length) {
+                this.index = 0;
+            } else {
+                this.index = newVal;
+            }
+        }
+    },
+    components: {
+        'carousel-control': {
+            template: '<i :class="classes" @click="clicked"></i>',
+            props: ['dir'],
+            computed: {
+                classes: function classes() {
+                    return 'carousel-control fa fa-2x fa-chevron-' + this.dir;
+                }
+            },
+            methods: {
+                clicked: function clicked() {
+                    this.$emit('change-image', this.dir === 'left' ? -1 : 1);
+                }
+            }
+        }
+    }
+});
+
 var app = new Vue({
     el: '#app',
 
