@@ -9,7 +9,8 @@ import { populateAmenitiesAndPrices } from './helpers';
 let model = JSON.parse(window.roomwav_listing_model);
 model = populateAmenitiesAndPrices(model);
 
-import ImageCarousel from '../components/ImageCarousel.vue'
+import ImageCarousel from '../components/ImageCarousel.vue';
+import ModalWindow   from '../components/ModalWindow.vue';
 
 const app = new Vue({
     el: '#app',
@@ -18,38 +19,17 @@ const app = new Vue({
         headerImageStyle: {
             'background-image': `url(${model.images[0]})`
         },
-        contracted: true,
-        modalOpen: false,
+        contracted: true
     }),
 
     methods: {
-        escapeKeyListener(evt) {
-            if (evt.keyCode === 27 && this.modalOpen) {
-                this.modalOpen = false;
-            }
+        openModal() {
+            this.$refs.imagemodal.modalOpen = true;
         }
-    },
-
-    watch: {
-        modalOpen: function() {
-            var className = 'modal-open';
-            if (this.modalOpen) {
-                document.body.classList.add(className);
-            } else {
-                document.body.classList.remove(className);
-            }
-        }
-    },
-
-    created: function() {
-        document.addEventListener('keyup', this.escapeKeyListener);
-    },
-
-    destroyed: function() {
-        document.removeEventListener('keyup', this.escapeKeyListener);
     },
 
     components: {
-        ImageCarousel
+        ImageCarousel,
+        ModalWindow
     }
 });
