@@ -8,6 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Room with a View</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/vue-style.css') }}" type="text/css">
     <script type="text/javascript">
         window.roomwav_listing_model = "{!! addslashes(json_encode($model)) !!}";
     </script>
