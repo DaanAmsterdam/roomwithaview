@@ -66,8 +66,8 @@
 
         <div id="modal" :class="{ show: modalOpen }">
             <button @click="modalOpen = false" class="modal-close">
-        &times;
-      </button>
+            &times;
+            </button>
             <div class="modal-content">
                 <image-carousel :images="images"></image-carousel>
             </div>
