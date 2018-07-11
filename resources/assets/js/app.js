@@ -12,6 +12,8 @@ model = populateAmenitiesAndPrices(model);
 import ImageCarousel from '../components/ImageCarousel.vue';
 import ModalWindow   from '../components/ModalWindow.vue';
 
+// ooh la
+
 const app = new Vue({
     el: '#app',
 

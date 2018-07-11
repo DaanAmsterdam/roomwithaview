@@ -1128,6 +1128,8 @@ model = Object(__WEBPACK_IMPORTED_MODULE_0__helpers__["a" /* populateAmenitiesAn
 
 
 
+// ooh la
+
 var app = new Vue({
     el: '#app',
 
