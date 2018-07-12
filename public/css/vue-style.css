@@ -1,4 +1,32 @@
 
+.header {
+height: 320px;
+}
+.header .header-img {
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 50% 50%;
+background-color: #f5f5f5;
+height: 100%;
+cursor: pointer;
+position: relative;
+}
+.header .header-img button {
+font-size: 14px;
+padding: 7px 18px;
+color: #484848;
+line-height: 1.43;
+background: #ffffff;
+font-weight: bold;
+border-radius: 4px;
+border: 1px solid #c4c4c4;
+}
+.header .header-img button.view-photos {
+position: absolute;
+bottom: 20px;
+left: 20px;
+}
+
 .image-carousel {
 height: 100%;
 margin-top: -12vh;
@@ -71,4 +99,40 @@ color: #ffffff;
 z-index: 1000;
 font-weight: 100;
 line-height: 1;
+}
+
+hr {
+border: 0;
+border-top: 1px solid #dce0e0;
+}
+.list {
+display: flex;
+flex-wrap: nowrap;
+margin: 2em 0;
+}
+.list .title {
+flex: 1 1 25%;
+}
+.list .content {
+flex: 1 1 75%;
+display: flex;
+flex-wrap: wrap;
+}
+.list .list-item {
+flex: 0 0 50%;
+margin-bottom: 16px;
+}
+.list .list-item > i {
+width: 35px;
+}
+@media (max-width: 743px) {
+.list .title {
+    flex: 1 1 33%;
+}
+.list .content {
+    flex: 1 1 67%;
+}
+.list .list-item {
+    flex: 0 0 100%;
+}
 }
