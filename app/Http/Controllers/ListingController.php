@@ -14,6 +14,7 @@ class ListingController extends Controller
                 'images/' . $id . '/Image_' . $i . '.jpg'
             );
         }
+
         return $model;
     }
 
@@ -21,6 +22,7 @@ class ListingController extends Controller
     {
         $model = $listing->toArray();
         $model = $this->add_image_urls($model, $listing->id);
+
         return response()->json($model);
     }
 
@@ -28,6 +30,7 @@ class ListingController extends Controller
     {
         $model = $listing->toArray();
         $model = $this->add_image_urls($model, $listing->id);
+
         return view('app', ['model' => $model]);
     }
 }

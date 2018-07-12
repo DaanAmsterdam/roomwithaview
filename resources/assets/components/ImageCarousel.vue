@@ -19,16 +19,19 @@
 
     export default {
         props: ['images'],
+
         data() {
             return {
                 index: 0
             }
         },
+
         computed: {
             image() {
                 return this.images[this.index];
             }
         },
+
         methods: {
             changeImage(val) {
                 let newVal = this.index + parseInt(val);
@@ -41,6 +44,7 @@
                 }
             }
         },
+        
         components: {
             CarouselControl
         }
@@ -49,22 +53,24 @@
 
 <style>
     .image-carousel {
-    height: 100%;
-    margin-top: -12vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        height: 100%;
+        margin-top: -12vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+
     .image-carousel img {
-    width: 100%;
+        width: 100%;
     }
+
     .image-carousel .controls {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    top: calc(50% - 40px);
-    left: 0;
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        top: calc(50% - 40px);
+        left: 0;
     }
 </style>

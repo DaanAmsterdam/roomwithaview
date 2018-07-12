@@ -19,41 +19,10 @@
         <img class="icon" src="{{ asset('images/logo.png') }}">
         <h1>Room with a View</h1>
     </div>
+
     <div id="app">
-        <header-image :image-url="images[0]" @header-clicked="openModal"></header-image>
-
-        <div class="container">
-            <div class="heading">
-                <h1>@{{ title }}</h1>
-                <p>@{{ address }}</p>
-            </div>
-            <hr>
-            <div class="about">
-                <h3>About this listing</h3>
-                <p :class="{ contracted: contracted }">@{{ about }}</p>
-                <button v-if="contracted" class="more" @click="contracted = false">+ More</button>
-            </div>
-            <div class="lists">
-                <feature-list title="Amenities" :items="amenities">
-                    <template slot-scope="amenity">
-                        <i class="fa fa-lg" :class="amenity.icon"></i>
-                        <span>@{{ amenity.title }}</span>
-                    </template>
-                </feature-list>
-
-                <feature-list title="Prices" :items="prices">
-                    <template slot-scope="price">
-                        @{{ price.title }}:
-                        <strong>@{{ price.value }}</strong>
-                    </template>
-                </feature-list>
-            </div>
-        </div>
-
-        <modal-window ref="imagemodal">
-            <image-carousel :images="images"></image-carousel>
-        </modal-window>
     </div>
+
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
