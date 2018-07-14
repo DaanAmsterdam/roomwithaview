@@ -10,7 +10,7 @@
 
             <hr>
 
-            <div class="about">
+            <div class="about">§
                 <h3>About this listing</h3>
                 <expandable-text>{{ about }}</expandable-text>
             </div>

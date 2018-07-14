@@ -8,5 +8,8 @@ import ListingPage from '../components/ListingPage.vue';
 
 const app = new Vue({
     el: '#app',
-    render: h => h(ListingPage)
+    // render: h => h(ListingPage)
+    render(element) {
+        return element(ListingPage);
+    }
 });

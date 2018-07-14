@@ -1233,8 +1233,9 @@ __webpack_require__(24);
 
 var app = new __WEBPACK_IMPORTED_MODULE_1_vue__["a" /* default */]({
     el: '#app',
-    render: function render(h) {
-        return h(__WEBPACK_IMPORTED_MODULE_2__components_ListingPage_vue___default.a);
+    // render: h => h(ListingPage)
+    render: function render(element) {
+        return element(__WEBPACK_IMPORTED_MODULE_2__components_ListingPage_vue___default.a);
     }
 });
 
