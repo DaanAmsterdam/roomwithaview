@@ -7,6 +7,11 @@ use App\Listing;
 
 class ListingController extends Controller
 {
+    /**
+     * @param $model
+     * @param $id
+     * @return mixed
+     */
     public function add_image_urls($model, $id)
     {
         for ($i = 1; $i <= 4; $i++) {
@@ -18,6 +23,10 @@ class ListingController extends Controller
         return $model;
     }
 
+    /**
+     * @param Listing $listing
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function get_listing_api(Listing $listing)
     {
         $model = $listing->toArray();
@@ -26,6 +35,10 @@ class ListingController extends Controller
         return response()->json($model);
     }
 
+    /**
+     * @param Listing $listing
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function get_listing_web(Listing $listing)
     {
         $model = $listing->toArray();

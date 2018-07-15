@@ -1218,24 +1218,26 @@ module.exports = __webpack_require__(23);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_fn_object_assign__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_fn_object_assign___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_core_js_fn_object_assign__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_ListingPage_vue__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_ListingPage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_ListingPage_vue__);
-
-__webpack_require__(24);
-
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__bootstrap__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__bootstrap__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_fn_object_assign__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_fn_object_assign___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_core_js_fn_object_assign__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ListingPage_vue__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ListingPage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_ListingPage_vue__);
 
 
 
 
-var app = new __WEBPACK_IMPORTED_MODULE_1_vue__["a" /* default */]({
+
+
+
+
+var app = new __WEBPACK_IMPORTED_MODULE_2_vue__["a" /* default */]({
     el: '#app',
     // render: h => h(ListingPage)
     render: function render(element) {
-        return element(__WEBPACK_IMPORTED_MODULE_2__components_ListingPage_vue___default.a);
+        return element(__WEBPACK_IMPORTED_MODULE_3__components_ListingPage_vue___default.a);
     }
 });
 
@@ -11907,6 +11909,7 @@ var render = function() {
           "div",
           { staticClass: "about" },
           [
+            _vm._v("§\n            "),
             _c("h3", [_vm._v("About this listing")]),
             _vm._v(" "),
             _c("expandable-text", [_vm._v(_vm._s(_vm.about))])
