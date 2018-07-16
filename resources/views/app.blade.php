@@ -15,11 +15,6 @@
 </head>
 
 <body>
-    <div id="toolbar">
-        <img class="icon" src="{{ asset('images/logo.png') }}">
-        <h1>Room with a View</h1>
-    </div>
-
     <div id="app">
     </div>
 

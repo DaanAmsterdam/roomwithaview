@@ -27,7 +27,7 @@
 
         watch: {
             modalOpen() {
-                var className = 'modal-open';
+                let className = 'modal-open';
                 if (this.modalOpen) {
                     document.body.classList.add(className);
                 } else {

@@ -14,16 +14,16 @@ prices.set('price_monthly_discount', 'Monthly discount');
 
 let populateAmenitiesAndPrices = function(state) {
   if (!state) return {};
-  var obj = {
-    id: state.id,
-    title: state.title,
-    address: state.address,
-    about: state.about,
-    amenities: [],
-    prices: [],
-    images: []
-  };
-  for (let key in state) {
+    let obj = {
+        id: state.id,
+        title: state.title,
+        address: state.address,
+        about: state.about,
+        amenities: [],
+        prices: [],
+        images: []
+    };
+    for (let key in state) {
     let arr = key.split("_");
     if (arr[0] === 'amenity' && state[key]) {
       obj.amenities.push(key);
